@@ -31,24 +31,24 @@ def wishMe():
     else:
         speak("Good Evening Sir !")
 
-    assname = "Waffle Assistant 1 point o"
+    assname = "Base Voice Assistant"
     speak("I am your Assistant")
     speak(assname)
     speak("How can i Help you, Sir")
 
 
-#def username():
-    #speak("What should i call you sir")
-    #uname = 'Suhaas'#takeCommand()
-    #speak("Welcome Mister")
-    #speak(uname)
-    #columns = shutil.get_terminal_size().columns
+def username():
+    speak("What should i call you sir")
+    uname = takeCommand()
+    speak("Welcome Mister")
+    speak(uname)
+    columns = shutil.get_terminal_size().columns
 
-    #print("#####################".center(columns))
-    #print("Welcome Mr.", uname.center(columns))
-    #print("#####################".center(columns))
+    print("#####################".center(columns))
+    print("Welcome Mr.", uname.center(columns))
+    print("#####################".center(columns))
 
-    #speak("How can i Help you, Sir")
+    speak("How can i help you, sir")
 
 
 def takeCommand():
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     clear = lambda: os.system('cls')
     clear()
     wishMe()
-    #username()
+    username()
 
     while True:
         query = takeCommand().lower()
@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
         elif 'weather' in query:
 
-            api_key = "d243eb2581bcc8f761e49a5221c90bc9"
+            api_key = "YOUR API KEY"
             base_url = "http://api.openweathermap.org/data/2.5/weather?"
             print("City name : ")
             speak("City name")
@@ -164,7 +164,7 @@ if __name__ == '__main__':
             exit()
 
         elif "camera" in query or "take a photo" in query or 'take a picture' in query:
-            ec.capture(0, "Waffle Camera", "waffleimg.jpg")
+            ec.capture(0, "Voice Assistant Camera", "voiceassistantimg.jpg")
 
 
         elif 'play on youtube' in query.lower():
